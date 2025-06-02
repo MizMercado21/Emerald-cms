@@ -1,0 +1,48 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "content/home.json"
+        fields:
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Main Heading", name: "heading", widget: "string"}
+          - {label: "Main Content", name: "content", widget: "markdown"}
+          - {label: "Hero Image", name: "hero_image", widget: "image", required: false}
+      
+      - label: "About Page"
+        name: "about"
+        file: "content/about.json"
+        fields:
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Main Heading", name: "heading", widget: "string"}
+          - {label: "About Content", name: "content", widget: "markdown"}
+          - {label: "Team Image", name: "team_image", widget: "image", required: false}
+      
+      - label: "Services Page"
+        name: "services"
+        file: "content/services.json"
+        fields:
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Main Heading", name: "heading", widget: "string"}
+          - {label: "Services Content", name: "content", widget: "markdown"}
+          - {label: "Services Image", name: "services_image", widget: "image", required: false}
+      
+      - label: "Contact Page"
+        name: "contact"
+        file: "content/contact.json"
+        fields:
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Main Heading", name: "heading", widget: "string"}
+          - {label: "Contact Content", name: "content", widget: "markdown"}
+          - {label: "Phone Number", name: "phone", widget: "string"}
+          - {label: "Email Address", name: "email", widget: "string"}
+          - {label: "Address", name: "address", widget: "text"}
